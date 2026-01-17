@@ -19,6 +19,7 @@
     flex-direction: column;
     gap: var(--space-md);
     align-items: center;
+    text-align: center;
 }
 
 .contact-link {
@@ -54,8 +55,9 @@
 
 /* WhatsApp Button */
 .btn-whatsapp {
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 12px;
     background-color: var(--color-primary);
     /* Mosgroen as per brand */

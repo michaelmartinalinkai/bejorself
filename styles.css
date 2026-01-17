@@ -2638,4 +2638,115 @@ a {
     .hero-buttons .btn {
         width: 100%;
     }
+
+    /* === AANBOD CARDS - MOBILE OPTIMIZATION (COMPACT) === */
+    .aanbod-card {
+        padding: 16px;
+        border-radius: 12px;
+        text-align: left;
+    }
+
+    .aanbod-icon {
+        width: 32px;
+        height: 32px;
+        margin: 0 0 10px 0;
+    }
+
+    .aanbod-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 4px;
+        text-align: left;
+    }
+
+    /* Hide verbose subtitle on mobile - save space */
+    .aanbod-for {
+        display: none;
+    }
+
+    .aanbod-desc {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        margin-bottom: 10px;
+        max-width: 100%;
+    }
+
+    .aanbod-bullets {
+        padding: 0;
+        margin-bottom: 8px;
+    }
+
+    .aanbod-bullets li {
+        font-size: 0.8rem;
+        padding-left: 14px;
+        margin-bottom: 4px;
+        line-height: 1.3;
+    }
+
+    .aanbod-bullets li::before {
+        width: 4px;
+        height: 4px;
+        top: 0.45em;
+    }
+
+    .read-more {
+        font-size: 0.8rem;
+        padding: 4px 10px;
+        margin-top: 6px;
+    }
+
+    /* Reduce gap between cards */
+    .aanbod-grid {
+        gap: 16px;
+    }
+
+    /* === REFLECTIE CARDS - MOBILE OPTIMIZATION === */
+    .reflectie-card {
+        padding: 20px 16px;
+        border-radius: 16px;
+    }
+
+    .reflectie-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+
+    .reflectie-card p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .reflectie-grid {
+        gap: 16px;
+        max-width: 100%;
+    }
+
+    /* === ABOUT INFO BLOCKS - MOBILE OPTIMIZATION === */
+    .about-info-block {
+        padding: 20px 16px;
+    }
+
+    .about-info-block h3 {
+        font-size: 1.15rem;
+        margin-bottom: 12px;
+    }
+
+    .about-list li {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+
+    .list-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    /* Section titles more compact */
+    .section-title {
+        margin-bottom: 8px;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 32px;
+    }
 }
