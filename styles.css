@@ -2531,3 +2531,111 @@ a {
     display: inline-block;
     text-align: center;
 }
+
+/* === MOBILE FIXES & OPTIMIZATIONS === */
+@media (max-width: 768px) {
+
+    /* Fix Container Padding */
+    .container {
+        padding: 0 20px;
+    }
+
+    /* Enhance Legibility on Mobile */
+    .hero-text,
+    .about-intro-text,
+    .reflectie-intro {
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero-text {
+        background: rgba(255, 255, 255, 0.8);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        padding: 30px 20px;
+        border-radius: 20px;
+        margin-top: 20px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Adjust Headlines */
+    .headline-be {
+        font-size: 3rem;
+    }
+
+    .headline-jorself {
+        font-size: 3.5rem;
+    }
+
+    .hero-subheadline {
+        font-size: 1.3rem;
+    }
+
+    /* Hero Image adjustment */
+    .hero-image {
+        margin-top: 30px;
+        order: -1;
+    }
+
+    .image-wrapper img {
+        max-height: 350px;
+    }
+
+    /* Make Content Fuller Width */
+    .hero-intro {
+        max-width: 100%;
+        font-size: 1rem;
+    }
+
+    /* Reset Animation Offsets for Mobile (Prevents horizontal scroll/hidden content) */
+    .hero-text,
+    .hero-image,
+    .about-main,
+    .fade-in {
+        transform: none !important;
+        opacity: 1 !important;
+        animation: none !important;
+        transition: none !important;
+    }
+
+    /* Ensure Nav Overlay works if JS is active */
+    .nav {
+        background: rgba(243, 241, 228, 0.98);
+        backdrop-filter: blur(10px);
+    }
+
+    /* Stack Grids Properly */
+    .aanbod-grid,
+    .reflectie-grid,
+    .about-info-blocks,
+    .about-main {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* Fix About Section text alignment */
+    .about-text-column {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .about-quote-inline {
+        border-left: none;
+        border-top: 2px solid var(--color-accent);
+        border-bottom: 2px solid var(--color-accent);
+        padding: 20px 0;
+        margin: 30px 0;
+    }
+
+    /* Buttons Full Width */
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+}
