@@ -1,0 +1,28 @@
+/* === About Section Animations === */
+.about-animate-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: transform var(--transition-normal), opacity var(--transition-normal);
+}
+
+.about-animate-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: transform var(--transition-normal), opacity var(--transition-normal);
+}
+
+.about-animate-left.slide-in-active,
+.about-animate-right.slide-in-active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .about-animate-left,
+    .about-animate-right {
+        transform: none;
+        opacity: 1;
+        transition: none;
+    }
+}

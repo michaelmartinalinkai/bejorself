@@ -1,0 +1,28 @@
+# llms.txt - About Be JorSelf
+
+# Site Information
+> Site Name: Be JorSelf
+> URL: https://www.bejorself.nl
+> Description: Be JorSelf - Coaching en Reflectie. Persoonlijke begeleiding voor groei, reflectie en emotionele intelligentie.
+
+# What We Do
+Be JorSelf is een coachingpraktijk gericht op bewustwording en persoonlijke groei. We helpen professionals en particulieren om te vertragen, te reflecteren en bewuste keuzes te maken vanuit rust en verbinding.
+
+# Main Features
+- Individuele Coaching: 1-op-1 begeleiding voor zelfinzicht en patroondoorbreking.
+- Reflectietrajecten: Verdiepende trajecten voor professionals (o.a. jeugdzorg) over ethiek en handelen.
+- Emotionele Intelligentie: Training in het herkennen en reguleren van emoties en zelfzorg.
+- Maatwerk: Trajecten volledig afgestemd op de persoonlijke vraag en behoefte.
+
+# Key Pages
+- Homepage: https://www.bejorself.nl/
+- Aanbod: https://www.bejorself.nl/aanbod.html
+- Over Mij: https://www.bejorself.nl/#over-mij
+- Contact: https://www.bejorself.nl/#contact
+
+# Target Audience
+We bedienen mensen die vastlopen in patronen, professionals die verdieping zoeken in hun werk, en iedereen die behoefte heeft aan een veilige plek voor reflectie en emotionele groei.
+
+# Contact
+- Email: info@bejorself.nl
+- Website: https://www.bejorself.nl

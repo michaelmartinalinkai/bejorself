@@ -1,0 +1,36 @@
+/* === Reflectie Section Animations === */
+.reflectie-animate-left {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: transform var(--transition-normal), opacity var(--transition-normal);
+}
+
+.reflectie-animate-right {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: transform var(--transition-normal), opacity var(--transition-normal);
+}
+
+.reflectie-animate-up {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: transform var(--transition-normal), opacity var(--transition-normal);
+}
+
+.reflectie-animate-left.slide-in-active,
+.reflectie-animate-right.slide-in-active,
+.reflectie-animate-up.slide-in-active {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .reflectie-animate-left,
+    .reflectie-animate-right,
+    .reflectie-animate-up {
+        transform: none;
+        opacity: 1;
+        transition: none;
+    }
+}
