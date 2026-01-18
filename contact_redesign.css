@@ -150,7 +150,8 @@
         font-size: 2rem;
     }
 
-    .contact-link {
+    .contact-link,
+    .btn-whatsapp {
         font-size: 1rem;
         width: 100%;
         justify-content: center;

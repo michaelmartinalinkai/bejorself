@@ -2548,43 +2548,126 @@ a {
         z-index: 2;
     }
 
-    .hero-text {
-        background: rgba(255, 255, 255, 0.8);
-        -webkit-backdrop-filter: blur(8px);
-        backdrop-filter: blur(8px);
-        padding: 30px 20px;
-        border-radius: 20px;
-        margin-top: 20px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    /* === HERO REDESIGN MOBILE === */
+
+    /* Structure & Layout */
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        padding: 0 !important;
+        gap: 0;
     }
 
-    /* Adjust Headlines */
+    /* 1. Hero Image - Full Width & Top */
+    .hero-image {
+        order: -1;
+        width: 100vw;
+        max-width: none;
+        margin-left: -20px;
+        /* Offset container padding if present, otherwise calc */
+        margin-right: -20px;
+        margin-top: 0;
+        margin-bottom: -40px;
+        /* Overlap effect */
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .image-wrapper {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .image-wrapper img {
+        width: 100%;
+        height: auto;
+        max-height: 450px;
+        /* Allow taller image */
+        object-fit: cover;
+        border-radius: 0 0 30px 30px;
+        /* Soft bottom curve instead of blob for full width? Or just let it be. User said "Maintain original crop". Let's stick to simple full width. */
+        border-radius: 0;
+    }
+
+    /* 2. Text Container - Remove "Card" Look */
+    .hero-text {
+        background: transparent !important;
+        backdrop-filter: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 0 20px 40px 20px !important;
+        margin-top: 0;
+        text-align: center;
+        /* Centralized for calm feel */
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 3. Typography - Free Floating Title */
+    .hero-headline {
+        margin-bottom: 10px;
+        line-height: 1.1;
+    }
+
     .headline-be {
         font-size: 3rem;
+        display: inline-block;
     }
 
     .headline-jorself {
         font-size: 3.5rem;
+        display: inline-block;
     }
 
     .hero-subheadline {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-bottom: 16px;
+        color: var(--color-primary);
+        /* Ensure visibility */
+        opacity: 0.9;
     }
 
-    /* Hero Image adjustment */
-    .hero-image {
-        margin-top: 30px;
-        order: -1;
-    }
-
-    .image-wrapper img {
-        max-height: 350px;
-    }
-
-    /* Make Content Fuller Width */
     .hero-intro {
-        max-width: 100%;
         font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 32px;
+        max-width: 100%;
+        color: var(--color-text);
+    }
+
+    /* 4. Buttons - Vertical Stack & Visual Hierarchy */
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 16px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        min-height: 54px;
+        /* Touchable area */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.05rem;
+    }
+
+    /* Secondary Button - Ghost/Outline Style */
+    .hero-buttons .btn-secondary {
+        background: transparent;
+        border: 2px solid #5a6c5f;
+        /* Hardcoded primary color or variable if valid */
+        border: 2px solid var(--color-primary);
+        color: var(--color-primary);
     }
 
     /* Reset Animation Offsets for Mobile (Prevents horizontal scroll/hidden content) */
@@ -2626,17 +2709,6 @@ a {
         border-bottom: 2px solid var(--color-accent);
         padding: 20px 0;
         margin: 30px 0;
-    }
-
-    /* Buttons Full Width */
-    .hero-buttons {
-        flex-direction: column;
-        width: 100%;
-        gap: 15px;
-    }
-
-    .hero-buttons .btn {
-        width: 100%;
     }
 
     /* === AANBOD CARDS - MOBILE OPTIMIZATION (COMPACT) === */
@@ -2748,5 +2820,177 @@ a {
     .section-subtitle {
         font-size: 1rem;
         margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* === Mobile Header === */
+    .header {
+        padding: 10px 0;
+    }
+
+    .logo img {
+        height: 60px !important;
+        /* Force smaller logo */
+        margin: 0 auto;
+    }
+
+    .header-content {
+        justify-content: center;
+        position: relative;
+    }
+
+    .mobile-menu-btn {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    /* === Hero Mobile Grid Layout === */
+    .hero {
+        padding-top: 100px;
+        padding-bottom: 40px;
+        min-height: auto;
+    }
+
+    .hero-content {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        /* Text takes slightly more width than image */
+        gap: 15px;
+        align-items: center;
+    }
+
+    /* Flatten the structure for Grid placement */
+    .hero-text {
+        display: contents;
+        background: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+    }
+
+    /* Ensure no parent containers are adding white backgrounds */
+    .hero-content {
+        background: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Placement 1: Headline (Top Center) */
+    .hero-headline {
+        grid-column: 1 / -1;
+        order: 1;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 5px;
+        margin-top: 0;
+    }
+
+    .headline-be {
+        font-size: 3.2rem;
+    }
+
+    .headline-jorself {
+        font-size: 3.8rem;
+    }
+
+    /* Placement 2: Subheadline (Below Headline) */
+    .hero-subheadline {
+        grid-column: 1 / -1;
+        order: 2;
+        text-align: center;
+        color: var(--color-terracotta);
+        font-family: var(--font-display);
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+    }
+
+    /* Placement 3: Intro Text (Left Column) */
+    .hero-intro {
+        grid-column: 1 / 2;
+        order: 3;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: var(--color-text-dark);
+        margin-bottom: 0;
+        text-align: left;
+        padding-right: 5px;
+        background: none !important;
+    }
+
+    /* Placement 4: Image (Right Column) */
+    .hero-image {
+        grid-column: 2 / 3;
+        order: 3;
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .image-wrapper {
+        width: 100%;
+        height: auto;
+        /* Allow height to adjust */
+        aspect-ratio: 0.7;
+        /* Portrait ratio */
+        /* Start organically from bottom right */
+        border-radius: 60% 40% 0 0 / 40% 50% 0 0;
+        overflow: hidden;
+        mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+        -webkit-mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+    }
+
+    /* Show the organic blob shape for mobile too if desired, but image masking is usually enough */
+    .image-shape {
+        display: block;
+        top: 10%;
+        right: -10%;
+        border-radius: 50%;
+    }
+
+
+
+    .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 100px 100px 0 100px;
+    }
+
+    /* Placement 5: Buttons (Bottom spanning full width) */
+    .hero-buttons {
+        grid-column: 1 / -1;
+        order: 4;
+        display: flex;
+        width: 100%;
+        margin-top: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        overflow: hidden;
+    }
+
+    .hero-buttons .btn {
+        flex: 1;
+        border-radius: 0;
+        padding: 15px 10px;
+        font-size: 0.9rem;
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+        width: 50%;
+        white-space: nowrap;
+    }
+
+    .hero-buttons .btn-primary {
+        background: #2f4538;
+        color: white;
+    }
+
+    .hero-buttons .btn-secondary {
+        background: rgba(255, 255, 255, 0.9);
+        color: #2f4538;
+        backdrop-filter: blur(5px);
     }
 }
