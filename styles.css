@@ -2964,23 +2964,34 @@ a {
         grid-column: 1 / -1;
         order: 4;
         display: flex;
+        flex-direction: row;
+        /* Force row direction */
         width: 100%;
         margin-top: 30px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         border-radius: 30px;
         overflow: hidden;
+        height: 54px;
+        /* Explicit height to force alignment */
     }
 
     .hero-buttons .btn {
-        flex: 1;
+        flex: 1 1 50%;
+        /* Grow, shrink, start at 50% */
         border-radius: 0;
-        padding: 15px 10px;
-        font-size: 0.9rem;
+        padding: 0 10px;
+        /* Reduced vertical padding */
+        font-size: 0.85rem;
+        /* Slightly smaller text to prevent wrap */
+        line-height: 54px;
+        /* Center text vertically */
+        height: 100%;
         text-align: center;
         justify-content: center;
         margin: 0;
-        width: 50%;
         white-space: nowrap;
+        display: flex;
+        align-items: center;
     }
 
     .hero-buttons .btn-primary {
@@ -2992,5 +3003,7 @@ a {
         background: rgba(255, 255, 255, 0.9);
         color: #2f4538;
         backdrop-filter: blur(5px);
+        border-left: 1px solid rgba(0, 0, 0, 0.05);
+        /* Separator */
     }
 }
