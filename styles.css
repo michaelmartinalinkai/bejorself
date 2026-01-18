@@ -2916,6 +2916,8 @@ a {
         margin-bottom: 0;
         text-align: left;
         padding-right: 5px;
+        padding-left: 20px;
+        /* Add left padding to prevent edge touching */
         background: none !important;
     }
 
