@@ -2843,7 +2843,7 @@ a {
 
     .mobile-menu-btn {
         position: absolute;
-        right: 0;
+        right: 20px;
         top: 50%;
         transform: translateY(-50%);
     }
@@ -2966,8 +2966,10 @@ a {
         display: flex;
         flex-direction: row;
         /* Force row direction */
-        width: 100%;
-        margin-top: 30px;
+        width: calc(100% - 40px);
+        /* Add margin on sides */
+        margin: 30px auto 0;
+        /* Center container */
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         border-radius: 30px;
         overflow: hidden;
