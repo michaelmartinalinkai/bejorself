@@ -2827,23 +2827,29 @@ a {
 
     /* === Mobile Header === */
     .header {
-        padding: 10px 0;
+        padding: 5px 0;
+        /* Tighter top spacing */
     }
 
     .logo img {
         height: 60px !important;
         /* Force smaller logo */
-        margin: 0 auto;
+        margin: 0;
+        margin-right: 20px;
+        /* Align to right */
     }
 
     .header-content {
-        justify-content: center;
+        justify-content: flex-end;
+        /* Align to end (right) */
         position: relative;
     }
 
     .mobile-menu-btn {
         position: absolute;
-        right: 20px;
+        left: 20px;
+        /* Move menu to left */
+        right: auto;
         top: 50%;
         transform: translateY(-50%);
     }
