@@ -955,12 +955,13 @@ a {
 }
 
 .aanbod-for {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    font-style: normal;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-accent);
+    letter-spacing: 0.1em;
+    color: #B07D6A;
     margin-bottom: var(--space-sm);
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .aanbod-desc,
@@ -1467,10 +1468,12 @@ a {
 
 .aanbod-for {
     font-family: var(--font-display);
-    font-style: italic;
-    color: var(--color-accent);
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #B07D6A;
     margin-bottom: var(--space-md);
-    font-size: 1rem;
+    font-size: 0.85rem;
 }
 
 .aanbod-desc {
@@ -1499,12 +1502,13 @@ a {
 }
 
 .aanbod-for {
-    font-style: italic;
-    color: var(--color-accent);
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #B07D6A;
     margin-bottom: var(--space-md);
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-family: var(--font-display);
-    /* Use serif for elegant feel */
 }
 
 .aanbod-desc {
@@ -1615,12 +1619,13 @@ a {
 }
 
 .aanbod-for {
-    font-style: italic;
-    color: var(--color-accent);
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #B07D6A;
     margin-bottom: var(--space-md);
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-family: var(--font-display);
-    /* Use serif for elegant feel */
 }
 
 .aanbod-desc {
