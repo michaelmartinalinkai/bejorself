@@ -2446,9 +2446,18 @@ a {
 
 /* === Contact Redesign Refined Styles === */
 
+.contact-info-block {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px;
+    width: 100%;
+}
+
 .contact-link {
-    display: flex;
+    display: flex !important;
     align-items: center;
+    justify-content: center !important;
     gap: 12px;
     font-size: 1.2rem;
     color: var(--color-text-dark);
@@ -2458,14 +2467,12 @@ a {
     background: rgba(255, 255, 255, 0.5);
     border-radius: 50px;
     transition: all 0.3s ease;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto !important;
 }
 
-.contact-link:hover {
-    background: var(--color-white);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(47, 69, 56, 0.1);
-    color: var(--color-terracotta);
-}
+/* ... existing hover styles ... */
 
 /* Force icon size and apply Terracotta color */
 .contact-icon {
@@ -2488,8 +2495,9 @@ a {
 
 /* WhatsApp Button */
 .btn-whatsapp {
-    display: inline-flex;
+    display: inline-flex !important;
     align-items: center;
+    justify-content: center !important;
     gap: 12px;
     background-color: var(--color-primary);
     /* Mosgroen */
@@ -2502,6 +2510,8 @@ a {
     transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
     box-shadow: 0 4px 15px rgba(47, 69, 56, 0.2);
     margin-top: var(--space-sm);
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 .btn-whatsapp:hover {
@@ -3021,4 +3031,73 @@ a {
         border-left: 1px solid rgba(0, 0, 0, 0.05);
         /* Separator */
     }
+}
+
+/* === Quote Separator (Handwritten Style) === */
+.quote-separator {
+    padding: var(--space-xl) 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote-bg-blob {
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    background: #EAEBD7;
+    /* Light olive/beige matching brand */
+    border-radius: 48% 52% 63% 37% / 36% 56% 44% 64%;
+    z-index: -1;
+    opacity: 0.8;
+    transform: rotate(-5deg);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+}
+
+.relative-content {
+    position: relative;
+    z-index: 1;
+}
+
+.handwritten-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 1.4;
+    margin-bottom: var(--space-md);
+    transform: rotate(-2deg);
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+.quote-hearts {
+    color: var(--color-highlight);
+    /* Peach */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: var(--space-sm);
+    transform: rotate(5deg);
+}
+/* Update: Be Jorself Mission Section */
+.about-mission-text {
+    margin-top: 2.5rem;
+}
+
+.about-mission-text h3 {
+    font-family: var(--font-display);
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.about-mission-text .closing-text {
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-top: 1.5rem;
 }
