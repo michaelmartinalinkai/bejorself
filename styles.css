@@ -3068,7 +3068,7 @@ a {
     font-family: 'Dancing Script', cursive;
     font-size: clamp(2.2rem, 4.5vw, 3.5rem);
     font-weight: 700;
-    color: var(--color-primary);
+    color: var(--color-highlight);
     line-height: 1.4;
     margin-bottom: var(--space-md);
     transform: rotate(-2deg);
