@@ -3066,7 +3066,7 @@ a {
 
 .handwritten-text {
     font-family: 'Dancing Script', cursive;
-    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
     font-weight: 700;
     color: var(--color-primary);
     line-height: 1.4;
@@ -3084,6 +3084,7 @@ a {
     margin-top: var(--space-sm);
     transform: rotate(5deg);
 }
+
 /* Update: Be Jorself Mission Section */
 .about-mission-text {
     margin-top: 2.5rem;
