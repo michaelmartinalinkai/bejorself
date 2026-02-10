@@ -3102,3 +3102,7 @@ a {
     color: var(--color-primary);
     margin-top: 1.5rem;
 }
+/* Force Pink Color Update */
+.handwritten-text {
+    color: #E6A18A !important;
+}
