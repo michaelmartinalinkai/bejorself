@@ -3292,4 +3292,70 @@ a {
     .about-info-block {
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
     }
-}
+
+    /* =============================================================
+   FIX 7: Layout & Overflow Fixes (Mobile)
+   Fixes "shifted left" and horizontal scrolling issues.
+   ============================================================= */
+    html,
+    body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+
+    @media (max-width: 768px) {
+
+        /* Hard reset for container width to prevent overflow */
+        .container {
+            width: 100% !important;
+            max-width: 100vw !important;
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+            overflow-x: hidden !important;
+        }
+
+        /* Fix Hero Grid causing width issues */
+        .hero-content {
+            display: flex !important;
+            flex-direction: column;
+            gap: var(--space-lg) !important;
+            width: 100% !important;
+        }
+
+        /* Ensure text doesn't overflow */
+        .hero-headline,
+        .hero-subheadline,
+        .hero-text {
+            width: 100% !important;
+            max-width: 100% !important;
+            word-wrap: break-word;
+        }
+
+        /* Tame the script font transform */
+        .headline-jorself {
+            transform: rotate(-3deg) !important;
+            /* Remove translateY */
+            display: block;
+            width: fit-content;
+        }
+
+        /* Safety net for all elements */
+        * {
+            max-width: 100vw;
+            box-sizing: border-box;
+        }
+
+        /* Specific fix for the 'image-shape' or absolute elements */
+        .pattern-8,
+        .pattern-9,
+        .pattern-10,
+        .pattern-11,
+        .pattern-12 {
+            display: none !important;
+            /* Hide background patterns causing scroll */
+        }
+    }
