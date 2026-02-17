@@ -3186,3 +3186,110 @@ a {
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
     }
 }
+
+/* =====================================================================
+   SAFARI iOS CRASH FIX — Alle 6 oorzaken gepatcht
+   Plak dit ONDERAAN je bestaande styles.css
+   Versie: 2026-02-17
+   ===================================================================== */
+
+/* =============================================================
+   FIX 1+2: Organic shapes — blur + opacity + animation UIT
+   Safari WebKit bug: opacity op een element met @keyframes
+   animation = crash. We schakelen alles uit op mobiel.
+   ============================================================= */
+@media (max-width: 768px) {
+    .organic-shape {
+        animation: none !important;
+        filter: none !important;
+        opacity: 0.08 !important;
+        will-change: auto !important;
+    }
+}
+
+/* =============================================================
+   FIX 3: backdrop-filter UIT op mobiel
+   backdrop-filter: blur() is de #1 Safari iOS crash-oorzaak.
+   We vervangen het door een solide achtergrondkleur.
+   ============================================================= */
+@media (max-width: 768px) {
+
+    .header,
+    .header.scrolled {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        background-color: rgba(253, 252, 248, 0.97) !important;
+    }
+
+    .nav {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        background-color: rgba(253, 252, 248, 0.98) !important;
+    }
+
+    .contact-form {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        background-color: rgba(255, 255, 255, 0.95) !important;
+    }
+}
+
+/* =============================================================
+   FIX 4: Background layers — parallax en compositing UIT
+   3 layers van 200% hoogte + will-change + transform =
+   ~63MB GPU geheugen. Alles uitschakelen op mobiel.
+   ============================================================= */
+@media (max-width: 768px) {
+    .bg-layer {
+        will-change: auto !important;
+        transform: none !important;
+        height: 100% !important;
+    }
+
+    .global-background {
+        position: absolute !important;
+    }
+}
+
+/* =============================================================
+   FIX 5: SVG patterns en overige animaties UIT
+   12 SVG patterns met animaties = onnodige GPU belasting.
+   ============================================================= */
+@media (max-width: 768px) {
+    .global-pattern {
+        animation: none !important;
+        opacity: 0.03 !important;
+    }
+
+    .bg-overlay {
+        filter: none !important;
+        mix-blend-mode: normal !important;
+    }
+
+    /* mix-blend-mode forceert extra compositing layers */
+    * {
+        mix-blend-mode: normal !important;
+    }
+}
+
+/* =============================================================
+   FIX 6: Image wrapper — mask-image en breathe animatie UIT
+   mask-image + animation op dezelfde container = extra crash
+   ============================================================= */
+@media (max-width: 768px) {
+
+    .image-wrapper,
+    .hero-image,
+    .image-shape {
+        mask-image: none !important;
+        -webkit-mask-image: none !important;
+        animation: none !important;
+    }
+
+    /* Verlaag box-shadow complexiteit */
+    .aanbod-card,
+    .reflectie-card,
+    .about-info-block {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+    }
+}

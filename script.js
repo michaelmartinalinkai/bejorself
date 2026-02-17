@@ -1,27 +1,21 @@
 /* =============================================
    BE JORSELF - JavaScript
    Scroll animations, navigation and interactions
+   FIX: Parallax disabled on mobile (Safari crash)
    ============================================= */
 
-// Mobile detection helper
-const isMobile = () => window.innerWidth <= 768;
-
 document.addEventListener('DOMContentLoaded', () => {
-    // Header scroll effect
     initHeaderScroll();
-
-    // Intersection Observer for fade-in animations
     initScrollAnimations();
 
-    // Parallax effect - SKIP on mobile (Safari crash fix)
-    if (!isMobile()) {
+    // FIX: Skip parallax entirely on mobile — the continuous
+    // requestAnimationFrame loop + transform updates drain
+    // GPU memory and crash Safari iOS
+    if (window.innerWidth > 768) {
         initParallax();
     }
 
-    // Mobile menu toggle
     initMobileMenu();
-
-    // Active menu highlighting based on scroll
     initActiveMenuHighlight();
 });
 
@@ -30,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 function initHeaderScroll() {
     const header = document.getElementById('header');
-
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > 50) {
             header.classList.add('scrolled');
@@ -42,12 +35,9 @@ function initHeaderScroll() {
 
 /**
  * Fade-in animations on scroll using Intersection Observer
- * Handles standard fade-ins and staggered fly-ins
  */
 function initScrollAnimations() {
-    // 1. Standard Fade In elements
     const fadeElements = document.querySelectorAll('.fade-in');
-
     const fadeObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -56,34 +46,24 @@ function initScrollAnimations() {
             }
         });
     }, { rootMargin: '0px 0px -50px 0px', threshold: 0.1 });
-
     fadeElements.forEach(el => fadeObserver.observe(el));
 
-    // 2. Staggered Slide-In Cards (Aanbod) - Right to Left
     const cards = document.querySelectorAll('.aanbod-card');
-
     const cardObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Determine index for stagger delay
                 const index = Array.from(cards).indexOf(entry.target);
-                // Stagger: 0ms, 140ms, 280ms... as requested
                 const delay = index * 140;
-
                 setTimeout(() => {
                     entry.target.classList.add('slide-in-active');
                 }, delay);
-
                 cardObserver.unobserve(entry.target);
             }
         });
     }, { rootMargin: '0px 0px -50px 0px', threshold: 0.15 });
-
     cards.forEach(card => cardObserver.observe(card));
 
-    // 3. Botanical Decorations Fade-In
     const botanicals = document.querySelectorAll('.botanical-decor-left, .botanical-decor-right');
-
     const botanicalObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -92,10 +72,8 @@ function initScrollAnimations() {
             }
         });
     }, { rootMargin: '0px 0px -100px 0px', threshold: 0.1 });
-
     botanicals.forEach(el => botanicalObserver.observe(el));
 
-    // 4. Reflectie Section Animations (Specific Directions)
     const reflectieLeft = document.getElementById('reflectie-left');
     const reflectieCenter = document.getElementById('reflectie-center');
     const reflectieRight = document.getElementById('reflectie-right');
@@ -112,10 +90,8 @@ function initScrollAnimations() {
             }
         });
     }, { rootMargin: '0px 0px -50px 0px', threshold: 0.15 });
-
     specificReflectieCards.forEach(card => specificReflectieObserver.observe(card));
 
-    // 5. About Section Animations (Left/Right Slide-in)
     const aboutLeft = document.getElementById('about-left');
     const aboutRight = document.getElementById('about-right');
     const aboutElements = [];
@@ -130,14 +106,11 @@ function initScrollAnimations() {
             }
         });
     }, { rootMargin: '0px 0px -50px 0px', threshold: 0.15 });
-
     aboutElements.forEach(el => aboutObserver.observe(el));
 }
 
 /**
- * Subtle parallax effect for Global Background System
- * Uses requestAnimationFrame for smooth GPU performance
- * NOTE: Disabled on mobile via isMobile() check in DOMContentLoaded
+ * Parallax effect — ONLY runs on desktop (>768px)
  */
 function initParallax() {
     const layers = document.querySelectorAll('.bg-layer');
@@ -184,7 +157,6 @@ function initParallax() {
 function initMobileMenu() {
     const menuBtn = document.querySelector('.mobile-menu-btn');
     const nav = document.querySelector('.nav');
-
     if (menuBtn && nav) {
         menuBtn.addEventListener('click', () => {
             nav.classList.toggle('active');
@@ -203,12 +175,10 @@ function initActiveMenuHighlight() {
 
     function updateActiveLink() {
         const scrollPosition = window.pageYOffset + headerHeight + 100;
-
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
             const sectionId = section.getAttribute('id');
-
             if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
                 navLinks.forEach(link => {
                     link.classList.remove('active');
@@ -225,25 +195,20 @@ function initActiveMenuHighlight() {
 }
 
 /**
- * Smooth scroll for anchor links with precise header offset
+ * Smooth scroll for anchor links
  */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');
         const target = document.querySelector(targetId);
-
         if (target) {
             const headerHeight = document.getElementById('header').offsetHeight;
-            const extraPadding = 0;
-            const targetPosition = target.offsetTop - headerHeight - extraPadding;
-
+            const targetPosition = target.offsetTop - headerHeight;
             window.scrollTo({
                 top: targetPosition,
                 behavior: 'smooth'
             });
-
-            // Close mobile menu if open
             const nav = document.querySelector('.nav');
             const menuBtn = document.querySelector('.mobile-menu-btn');
             if (nav && nav.classList.contains('active')) {
@@ -255,7 +220,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 /**
- * Form submission handler (placeholder)
+ * Form submission handler
  */
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
