@@ -3342,28 +3342,38 @@ a {
             display: flex;
             justify-content: center;
             overflow: visible !important;
-            /* Allow shape to extend */
+            margin-bottom: 20px;
+            /* Space below image */
         }
 
         .image-wrapper {
             width: 100%;
-            max-width: 320px;
-            /* Constrain width */
+            max-width: 280px !important;
+            /* Reduced from 320px to ensure fit */
             margin: 0 auto;
             overflow: visible !important;
-            /* Allow shape extension */
+            position: relative;
+            left: -10px;
+            /* Slight optical adjustment left to center the blob */
         }
 
         .image-shape {
-            /* Pull shape inside to avoid horizontal scroll */
-            right: -10px !important;
+            right: auto !important;
+            left: 0 !important;
             width: 100% !important;
+            transform: none !important;
+            /* Disable any shifting */
+            animation: none !important;
+            /* Stop breathing causing overflow */
         }
 
         .image-wrapper img {
-            max-height: 400px;
+            max-height: 350px !important;
+            /* Reduced height */
             width: 100%;
             object-fit: cover;
+            animation: none !important;
+            /* Stop breathing causing overflow */
         }
 
         /* Tame the script font transform */
