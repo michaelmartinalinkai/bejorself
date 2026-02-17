@@ -3,6 +3,9 @@
    Scroll animations, navigation and interactions
    ============================================= */
 
+// Mobile detection helper
+const isMobile = () => window.innerWidth <= 768;
+
 document.addEventListener('DOMContentLoaded', () => {
     // Header scroll effect
     initHeaderScroll();
@@ -10,8 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Intersection Observer for fade-in animations
     initScrollAnimations();
 
-    // Parallax effect for botanical elements
-    initParallax();
+    // Parallax effect - SKIP on mobile (Safari crash fix)
+    if (!isMobile()) {
+        initParallax();
+    }
 
     // Mobile menu toggle
     initMobileMenu();
@@ -91,7 +96,6 @@ function initScrollAnimations() {
     botanicals.forEach(el => botanicalObserver.observe(el));
 
     // 4. Reflectie Section Animations (Specific Directions)
-    // IDs: reflectie-left, reflectie-center, reflectie-right
     const reflectieLeft = document.getElementById('reflectie-left');
     const reflectieCenter = document.getElementById('reflectie-center');
     const reflectieRight = document.getElementById('reflectie-right');
@@ -110,8 +114,6 @@ function initScrollAnimations() {
     }, { rootMargin: '0px 0px -50px 0px', threshold: 0.15 });
 
     specificReflectieCards.forEach(card => specificReflectieObserver.observe(card));
-
-    // Duplicate block removed
 
     // 5. About Section Animations (Left/Right Slide-in)
     const aboutLeft = document.getElementById('about-left');
@@ -133,62 +135,45 @@ function initScrollAnimations() {
 }
 
 /**
- * Subtle parallax effect for botanical background elements
- */
-/**
  * Subtle parallax effect for Global Background System
  * Uses requestAnimationFrame for smooth GPU performance
+ * NOTE: Disabled on mobile via isMobile() check in DOMContentLoaded
  */
 function initParallax() {
-    // 4. Enhanced Parallax Effect (Scroll + Mouse)
     const layers = document.querySelectorAll('.bg-layer');
     if (layers.length) {
         let scrollY = window.pageYOffset;
         let mouseX = 0;
         let mouseY = 0;
-        // Dampening factors for smoother movement
         let currentScrollY = scrollY;
         let currentMouseX = 0;
         let currentMouseY = 0;
 
-        // Track scroll position
         window.addEventListener('scroll', () => {
             scrollY = window.pageYOffset;
         });
 
-        // Track mouse position
         document.addEventListener('mousemove', (e) => {
-            // Normalize mouse position from -1 to 1
             mouseX = (e.clientX / window.innerWidth) * 2 - 1;
             mouseY = (e.clientY / window.innerHeight) * 2 - 1;
         });
 
-        // Animation loop for smooth physics
         function easeParallax() {
-            // Smoothly interpolate current values towards target values
-            // The 0.1 factor controls the "lag" or "weight" (lower = smoother/slower)
             currentScrollY += (scrollY - currentScrollY) * 0.1;
             currentMouseX += (mouseX - currentMouseX) * 0.05;
             currentMouseY += (mouseY - currentMouseY) * 0.05;
 
             layers.forEach(layer => {
                 const speed = parseFloat(layer.getAttribute('data-speed')) || 0.1;
-
-                // Calculate movement
-                // Y-axis: Scroll + slight mouse influence
-                // X-axis: Mouse influence
-                const yPos = currentScrollY * speed * 0.5; // Adjusted scale
-                const xOffset = currentMouseX * 50 * speed; // Mouse horizontal parallax
-                const yOffset = currentMouseY * 50 * speed; // Mouse vertical parallax
-
-                // Apply transform
+                const yPos = currentScrollY * speed * 0.5;
+                const xOffset = currentMouseX * 50 * speed;
+                const yOffset = currentMouseY * 50 * speed;
                 layer.style.transform = `translate3d(${xOffset}px, ${yPos + yOffset}px, 0)`;
             });
 
             requestAnimationFrame(easeParallax);
         }
 
-        // Start the loop
         easeParallax();
     }
 }
@@ -236,12 +221,11 @@ function initActiveMenuHighlight() {
     }
 
     window.addEventListener('scroll', updateActiveLink);
-    updateActiveLink(); // Run on load
+    updateActiveLink();
 }
 
 /**
  * Smooth scroll for anchor links with precise header offset
- * Ensures titles and cards are perfectly aligned when scrolling
  */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -250,9 +234,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const target = document.querySelector(targetId);
 
         if (target) {
-            // Get precise header height + extra breathing room
             const headerHeight = document.getElementById('header').offsetHeight;
-            const extraPadding = 0; // Extra space so title isn't jammed against header
+            const extraPadding = 0;
             const targetPosition = target.offsetTop - headerHeight - extraPadding;
 
             window.scrollTo({
@@ -278,15 +261,9 @@ const contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
-
-        // Get form data
         const formData = new FormData(this);
         const name = formData.get('name');
-
-        // Show simple confirmation (replace with actual form handling)
         alert(`Bedankt ${name}! Je bericht is verzonden. We nemen zo snel mogelijk contact met je op.`);
-
-        // Reset form
         this.reset();
     });
 }
