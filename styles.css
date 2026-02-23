@@ -1081,7 +1081,7 @@ a {
 
 .footer-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr 1fr;
     gap: var(--space-xl);
     margin-bottom: var(--space-lg);
 }
@@ -2001,6 +2001,24 @@ a {
 
 .footer-nav a:hover {
     color: var(--color-accent);
+}
+
+.footer-social {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--color-text-soft);
+    transition: var(--transition-fast);
+}
+
+.footer-social a:hover .social-icon {
+    color: var(--color-accent);
+    transform: translateY(-2px);
 }
 
 /* === Animations === */
@@ -3440,4 +3458,13 @@ a {
             display: none !important;
             /* Hide background patterns causing scroll */
         }
+
+        /* Update footer content grid */
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            /* Adjust as needed */
+        }
     }
+}
