@@ -2,27 +2,61 @@
 
 # Site Information
 > Site Name: Be JorSelf
-> URL: https://www.bejorself.nl
-> Description: Be JorSelf - Coaching en Reflectie. Persoonlijke begeleiding voor groei, reflectie en emotionele intelligentie.
+> URL: https://bejorself.nl
+> Description: Be JorSelf is een online trainingsplatform voor professionals die willen groeien in zelfinzicht, emotionele intelligentie en bewust professioneel handelen.
+> Language: Dutch (nl)
+> Contact Email: info@bejorself.nl
 
-# What We Do
-Be JorSelf is een coachingpraktijk gericht op bewustwording en persoonlijke groei. We helpen professionals en particulieren om te vertragen, te reflecteren en bewuste keuzes te maken vanuit rust en verbinding.
+# About Be JorSelf
+Be JorSelf is een online trainingsplatform opgericht door Jordana. De naam is een samensmelting van haar naam (Jordana) en de missie: Be Yourself. Het platform richt zich op professionals die werken met mensen — zoals jeugdprofessionals en begeleiders — en biedt trainingen in emotionele intelligentie, veerkracht en bewust professioneel handelen. De trainingen zijn ontwikkeld vanuit dagelijkse praktijkervaring, niet alleen vanuit theorie.
 
-# Main Features
-- Individuele Coaching: 1-op-1 begeleiding voor zelfinzicht en patroondoorbreking.
-- Reflectietrajecten: Verdiepende trajecten voor professionals (o.a. jeugdzorg) over ethiek en handelen.
-- Emotionele Intelligentie: Training in het herkennen en reguleren van emoties en zelfzorg.
-- Maatwerk: Trajecten volledig afgestemd op de persoonlijke vraag en behoefte.
+# Founder
+Jordana is de oprichter en trainer van Be JorSelf. Zij werkt dagelijks met mensen in het veld waar emotionele belasting, complexe situaties en professionele verantwoordelijkheid samenkomen. Haar trainingen ontstaan vanuit wat er in het werk echt speelt.
 
-# Key Pages
-- Homepage: https://www.bejorself.nl/
-- Aanbod: https://www.bejorself.nl/aanbod.html
-- Over Mij: https://www.bejorself.nl/#over-mij
-- Contact: https://www.bejorself.nl/#contact
+# Online Trainingen (Aanbod)
+- **Emotionele intelligentie in de praktijk**: Training gericht op het herkennen, begrijpen en reguleren van emoties in professionele situaties. Onderwerpen: emotioneel bewustzijn, reguleren onder druk, handelen vanuit rust.
+- **Reflectief werken voor professionals**: Training gericht op bewust professioneel handelen en het maken van verantwoorde keuzes. Onderwerpen: professioneel handelen, grenzen en verantwoordelijkheid, morele afwegingen.
+- **Veerkracht & zelfzorg in het werk**: Training gericht op duurzame inzetbaarheid en het bewaken van eigen grenzen. Onderwerpen: zelfzorg zonder schuldgevoel, balans tussen nabijheid en afstand, duurzaam inzetbaar blijven.
+- **Maatwerk & verdieping**: Op maat gemaakte trajecten afgestemd op specifieke werkcontexten. Mogelijkheden: losse online trainingen, verdiepende modules, combinaties op maat.
+
+# Werkprincipes
+- Praktijkervaring als uitgangspunt
+- Reflectie als professionele vaardigheid
+- Psychologische veiligheid zonder het soft te maken
+- Vertraging om bewuster en steviger te handelen
 
 # Target Audience
-We bedienen mensen die vastlopen in patronen, professionals die verdieping zoeken in hun werk, en iedereen die behoefte heeft aan een veilige plek voor reflectie en emotionele groei.
+Professionals die werken met mensen, waaronder jeugdprofessionals, begeleiders en hulpverleners. Geschikt voor iedereen die wil groeien in zelfinzicht, emotionele intelligentie en bewust professioneel handelen.
+
+# Key Pages
+- Homepage: https://bejorself.nl/
+- Aanbod (trainingsoverzicht): https://bejorself.nl/aanbod.html
+- Over Mij: https://bejorself.nl/#over-mij
+- Reflectie: https://bejorself.nl/#reflectie
+- Contact: https://bejorself.nl/#contact
+
+# Social Media
+- Instagram: https://www.instagram.com/be_jorself_trainingen/
+- LinkedIn: https://www.linkedin.com/in/jordananinkeula/
+- TikTok: https://www.tiktok.com/@be_jorself
+
+# FAQ
+Q: Wat is Be JorSelf?
+A: Be JorSelf is een online trainingsplatform voor professionals die willen groeien in zelfinzicht, emotionele intelligentie en bewust professioneel handelen. De trainingen zijn ontwikkeld door iemand die zelf dagelijks in het werkveld staat.
+
+Q: Welke online trainingen biedt Be JorSelf aan?
+A: Be JorSelf biedt vier typen trainingen: Emotionele intelligentie in de praktijk, Reflectief werken voor professionals, Veerkracht en zelfzorg in het werk, en Maatwerk en verdieping.
+
+Q: Voor wie zijn de trainingen bedoeld?
+A: De trainingen zijn bedoeld voor professionals die werken met mensen, zoals jeugdprofessionals en begeleiders. Geschikt voor iedereen die wil groeien in emotionele intelligentie, veerkracht en bewust professioneel handelen.
+
+Q: Hoe kan ik contact opnemen?
+A: Via e-mail op info@bejorself.nl of via WhatsApp. Je bent welkom voor een vrijblijvend kennismakingsgesprek.
+
+Q: Wat maakt Be JorSelf anders?
+A: De trainingen zijn ontwikkeld vanuit de dagelijkse praktijk, niet alleen vanuit theorie. De oprichter Jordana werkt zelf actief in het werkveld. De naam staat voor Be Yourself: authentiek en bewust professioneel handelen.
 
 # Contact
 - Email: info@bejorself.nl
-- Website: https://www.bejorself.nl
+- WhatsApp: https://wa.me/31641854274
+- Website: https://bejorself.nl
