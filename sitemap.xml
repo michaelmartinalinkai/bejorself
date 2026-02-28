@@ -3,11 +3,11 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.bejorself.nl/</loc>
-    <lastmod>2026-01-15</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
+
   <!-- Over mij (Anchor on Home) -->
   <url>
     <loc>https://www.bejorself.nl/#over-mij</loc>
@@ -15,7 +15,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
   <!-- Aanbod Page -->
   <url>
     <loc>https://www.bejorself.nl/aanbod.html</loc>
@@ -23,7 +23,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  
+
   <!-- Reflectie (Anchor on Home) -->
   <url>
     <loc>https://www.bejorself.nl/#reflectie</loc>
@@ -36,6 +36,54 @@
   <url>
     <loc>https://www.bejorself.nl/#contact</loc>
     <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog Overview -->
+  <url>
+    <loc>https://www.bejorself.nl/blog/</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog: Zelfreflectie op werk -->
+  <url>
+    <loc>https://www.bejorself.nl/blog/zelfreflectie-op-werk.html</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog: Persoonlijke ontwikkeling tips -->
+  <url>
+    <loc>https://www.bejorself.nl/blog/persoonlijke-ontwikkeling-tips.html</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog: Online coaching vs traditioneel -->
+  <url>
+    <loc>https://www.bejorself.nl/blog/online-coaching-vs-traditioneel.html</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog: Burnout voorkomen -->
+  <url>
+    <loc>https://www.bejorself.nl/blog/burnout-voorkomen-professionals.html</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog: Personal branding -->
+  <url>
+    <loc>https://www.bejorself.nl/blog/wat-is-een-personal-brand.html</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
