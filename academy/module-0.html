@@ -60,212 +60,136 @@
     }
     </script>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="../styles.css?v=12">
-    <link rel="stylesheet" href="../aanbod.css">
-    <link rel="stylesheet" href="../academy.css">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .module-page { max-width: 800px; margin: 0 auto; padding: 40px 24px 80px; }
+        .module-page h1 { font-size: 2rem; margin-bottom: 4px; color: #2f4538; }
+        .module-page h2 { font-size: 1.3rem; margin-top: 32px; margin-bottom: 12px; color: #3c503c; }
+        .module-page p, .module-page li { line-height: 1.7; color: #333; font-size: 1rem; }
+        .module-page ul { padding-left: 24px; }
+        .module-page li { margin-bottom: 8px; }
+        .module-page a { color: #c87860; }
+        .module-logo { width: 120px; margin-bottom: 24px; }
+        .module-back { display: inline-block; margin-bottom: 24px; color: #3c503c; text-decoration: none; font-weight: 600; }
+        .module-back:hover { text-decoration: underline; }
+        .module-number-label { font-size: 0.85rem; color: #c87860; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+        .module-meta {
+            display: flex; flex-wrap: wrap; gap: 16px;
+            margin: 20px 0 32px; padding: 16px 20px;
+            background: rgba(255,255,255,0.85); border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .meta-item { text-align: center; flex: 1; min-width: 100px; }
+        .meta-label { display: block; font-size: 0.75rem; color: #999; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+        .meta-value { display: block; font-weight: 600; color: #2f4538; font-size: 0.95rem; }
+        .module-quote {
+            font-style: italic; font-size: 1.05rem; color: #3c503c;
+            border-left: 3px solid #c87860; padding: 12px 16px; margin: 24px 0;
+            background: rgba(255,255,255,0.5); border-radius: 0 8px 8px 0;
+        }
+        .highlight-box {
+            background: rgba(255,255,255,0.85); border-radius: 12px;
+            padding: 24px; margin: 24px 0;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .highlight-box h3 { color: #2f4538; margin-bottom: 8px; font-size: 1.1rem; }
+        .module-nav {
+            display: flex; justify-content: space-between; gap: 16px;
+            margin-top: 40px; flex-wrap: wrap;
+        }
+        .module-nav a {
+            text-decoration: none; padding: 12px 20px;
+            background: rgba(255,255,255,0.85); border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: transform 0.2s;
+        }
+        .module-nav a:hover { transform: translateY(-2px); }
+        .module-nav .nav-label { display: block; font-size: 0.75rem; color: #999; text-transform: uppercase; }
+        .module-nav .nav-title { display: block; font-weight: 600; color: #2f4538; font-size: 0.95rem; }
+    </style>
 </head>
 
 <body>
-    <!-- === Global Organic Background === -->
-    <div class="global-background" aria-hidden="true">
-        <div class="bg-layer layer-slow" data-speed="0.03">
-            <div class="organic-shape shape-sage-1"></div>
-            <div class="organic-shape shape-peach-1"></div>
-            <div class="organic-shape shape-mist-1"></div>
-        </div>
-        <div class="bg-layer layer-medium" data-speed="0.08">
-            <div class="organic-shape shape-eucalyptus-1"></div>
-            <div class="organic-shape shape-olive-1"></div>
-        </div>
-        <div class="bg-overlay"></div>
-    </div>
+    <div class="module-page">
+        <a href="../academy.html" class="module-back">&larr; Terug naar Academy</a>
+        <img src="../assets/logo.png" alt="Be JorSelf" class="module-logo">
 
-    <!-- Header -->
-    <header class="header" id="header">
-        <div class="container header-content">
-            <a href="../index.html" class="logo">
-                <img src="../assets/logo.png" alt="Be JorSelf Logo">
-            </a>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li><a href="../index.html" class="nav-link">Home</a></li>
-                    <li><a href="../over-jordana.html" class="nav-link">Over Jordana</a></li>
-                    <li><a href="../aanbod.html" class="nav-link">Aanbod</a></li>
-                    <li><a href="../academy.html" class="nav-link active">Academy</a></li>
-                    <li><a href="../index.html#reflectie" class="nav-link">Reflectie</a></li>
-                    <li><a href="../blog/" class="nav-link">Blog</a></li>
-                    <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-            <button class="mobile-menu-btn" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </header>
+        <p class="module-number-label">Module 0</p>
+        <h1>De Landing</h1>
+        <p>Aankomen. Orienteren. Landen in het programma.</p>
 
-    <!-- Breadcrumb -->
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <div class="container">
-            <ol class="breadcrumb-list">
-                <li><a href="../index.html">Home</a></li>
-                <li class="separator">/</li>
-                <li><a href="../academy.html">Academy</a></li>
-                <li class="separator">/</li>
-                <li aria-current="page">Module 0</li>
-            </ol>
-        </div>
-    </nav>
-
-    <!-- Module Hero -->
-    <section class="module-hero">
-        <div class="container">
-            <div class="module-hero-content fade-in">
-                <p class="module-hero-number">Module 0</p>
-                <h1 class="module-hero-title">De Landing</h1>
-                <p class="module-hero-subtitle">
-                    Aankomen. Orienteren. Landen in het programma.
-                </p>
-                <div class="module-hero-meta">
-                    <div class="module-meta-item">
-                        <span class="module-meta-label">Studiebelasting</span>
-                        <span class="module-meta-value">0,5 SBU</span>
-                    </div>
-                    <div class="module-meta-item">
-                        <span class="module-meta-label">Type</span>
-                        <span class="module-meta-value">Introductie</span>
-                    </div>
-                    <div class="module-meta-item">
-                        <span class="module-meta-label">Niveau</span>
-                        <span class="module-meta-value">HBO+</span>
-                    </div>
-                </div>
+        <div class="module-meta">
+            <div class="meta-item">
+                <span class="meta-label">Studiebelasting</span>
+                <span class="meta-value">0,5 SBU</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Type</span>
+                <span class="meta-value">Introductie</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Niveau</span>
+                <span class="meta-value">HBO+</span>
             </div>
         </div>
-    </section>
 
-    <!-- Module Body -->
-    <section class="module-body">
-        <div class="container">
-            <div class="module-content fade-in">
-                <h2>Waarom een landingsmodule?</h2>
-                <p>
-                    Voordat je begint met leren, is het belangrijk om eerst te landen. Om even stil te staan
-                    bij waar je nu bent, wat je meebrengt en wat je hoopt te vinden in dit programma.
-                </p>
-                <p>
-                    Module 0 is bewust anders dan de inhoudelijke modules die volgen. Hier gaat het niet
-                    om theorie of modellen, maar om jou. Om je vertrekpunt. Om bewust te kiezen voor
-                    dit traject.
-                </p>
+        <h2>Waarom een landingsmodule?</h2>
+        <p>
+            Voordat je begint met leren, is het belangrijk om eerst te landen. Om even stil te staan
+            bij waar je nu bent, wat je meebrengt en wat je hoopt te vinden in dit programma.
+        </p>
+        <p>
+            Module 0 is bewust anders dan de inhoudelijke modules die volgen. Hier gaat het niet
+            om theorie of modellen, maar om jou. Om je vertrekpunt. Om bewust te kiezen voor
+            dit traject.
+        </p>
 
-                <h2>Wat kun je verwachten?</h2>
-                <ul>
-                    <li>Kennismaking met de opzet en werkwijze van de Academy</li>
-                    <li>Orientatie op de vijf modules en hun samenhang</li>
-                    <li>Reflectie op je eigen startpositie als professional</li>
-                    <li>Eerste bewustwording van je professionele patronen</li>
-                    <li>Technische introductie op het e-learning platform</li>
-                </ul>
+        <h2>Wat kun je verwachten?</h2>
+        <ul>
+            <li>Kennismaking met de opzet en werkwijze van de Academy</li>
+            <li>Orientatie op de vijf modules en hun samenhang</li>
+            <li>Reflectie op je eigen startpositie als professional</li>
+            <li>Eerste bewustwording van je professionele patronen</li>
+            <li>Technische introductie op het e-learning platform</li>
+        </ul>
 
-                <div class="module-quote">
-                    "De reis begint niet bij de eerste stap, maar bij het besluit om te vertrekken."
-                </div>
-
-                <h2>Jouw startpositie</h2>
-                <p>
-                    In deze module wordt je gevraagd om na te denken over je huidige professionele situatie.
-                    Waar loop je tegenaan? Wat kost je energie? Waar wil je naartoe groeien?
-                </p>
-                <p>
-                    Deze reflectie vormt het fundament voor de modules die volgen. Je antwoorden zijn
-                    alleen voor jou — ze helpen je om de komende modules bewuster te doorlopen.
-                </p>
-
-                <div class="highlight-box">
-                    <h3>Na afronding van Module 0</h3>
-                    <p>
-                        Je hebt een helder beeld van het programma, je kent de werkwijze en je hebt
-                        je eerste persoonlijke reflectie vastgelegd. Je bent klaar om te beginnen
-                        aan Module 1.
-                    </p>
-                </div>
-            </div>
+        <div class="module-quote">
+            "De reis begint niet bij de eerste stap, maar bij het besluit om te vertrekken."
         </div>
-    </section>
 
-    <!-- Module Navigation -->
-    <div class="container">
-        <nav class="module-nav fade-in">
-            <a href="../academy.html" class="prev">
-                <span class="module-nav-label">Terug naar</span>
-                <span class="module-nav-title">Academy overzicht</span>
+        <h2>Jouw startpositie</h2>
+        <p>
+            In deze module wordt je gevraagd om na te denken over je huidige professionele situatie.
+            Waar loop je tegenaan? Wat kost je energie? Waar wil je naartoe groeien?
+        </p>
+        <p>
+            Deze reflectie vormt het fundament voor de modules die volgen. Je antwoorden zijn
+            alleen voor jou — ze helpen je om de komende modules bewuster te doorlopen.
+        </p>
+
+        <div class="highlight-box">
+            <h3>Na afronding van Module 0</h3>
+            <p>
+                Je hebt een helder beeld van het programma, je kent de werkwijze en je hebt
+                je eerste persoonlijke reflectie vastgelegd. Je bent klaar om te beginnen
+                aan Module 1.
+            </p>
+        </div>
+
+        <nav class="module-nav">
+            <a href="../academy.html">
+                <span class="nav-label">Terug naar</span>
+                <span class="nav-title">Academy overzicht</span>
             </a>
-            <a href="module-1.html" class="next">
-                <span class="module-nav-label">Volgende module</span>
-                <span class="module-nav-title">Module 1: De Put vs. De Ladder</span>
+            <a href="module-1.html">
+                <span class="nav-label">Volgende module</span>
+                <span class="nav-title">Module 1: De Put vs. De Ladder</span>
             </a>
         </nav>
+
+        <hr style="margin-top: 48px; border: none; border-top: 1px solid #e0e0e0;">
+        <p style="color: #999; font-size: 0.85rem; margin-top: 16px;">Be JorSelf Academy — KVK 81711387 — <a href="https://bejorself.nl">bejorself.nl</a></p>
     </div>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content fade-in">
-                <p class="cta-text">
-                    Klaar om te starten?<br>
-                    Plan een gratis kennismakingsgesprek.
-                </p>
-                <a href="https://wa.me/31641854274" target="_blank" class="btn btn-primary">WhatsApp</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="../assets/logo.png" alt="Be JorSelf" class="footer-logo">
-                    <p class="footer-tagline">Online Training voor Professionals</p>
-                </div>
-                <div class="footer-nav">
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../over-jordana.html">Over Jordana</a></li>
-                        <li><a href="../aanbod.html">Aanbod</a></li>
-                        <li><a href="../academy.html">Academy</a></li>
-                        <li><a href="../blog/">Blog</a></li>
-                        <li><a href="../index.html#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.instagram.com/be_jorself_trainingen/" target="_blank" rel="noopener" aria-label="Instagram">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/jordananinkeula/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                    </a>
-                    <a href="https://www.tiktok.com/@be_jorself" target="_blank" rel="noopener" aria-label="TikTok">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
-                    </a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>Be JorSelf &copy; 2026 — Powered by <a href="https://linkaiagency.com" target="_blank" rel="noopener">Link AI</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="../script.js"></script>
 </body>
 
 </html>

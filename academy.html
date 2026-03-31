@@ -92,318 +92,222 @@
     }
     </script>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .academy-page { max-width: 800px; margin: 0 auto; padding: 40px 24px 80px; }
+        .academy-page h1 { font-size: 2rem; margin-bottom: 8px; color: #2f4538; }
+        .academy-page h2 { font-size: 1.3rem; margin-top: 32px; margin-bottom: 12px; color: #3c503c; }
+        .academy-page p, .academy-page li { line-height: 1.7; color: #333; font-size: 1rem; }
+        .academy-page ul { padding-left: 24px; }
+        .academy-page li { margin-bottom: 8px; }
+        .academy-page a { color: #c87860; }
+        .academy-logo { width: 120px; margin-bottom: 24px; }
+        .academy-back { display: inline-block; margin-bottom: 24px; color: #3c503c; text-decoration: none; font-weight: 600; }
+        .academy-back:hover { text-decoration: underline; }
 
-    <link rel="stylesheet" href="styles.css?v=12">
-    <link rel="stylesheet" href="aanbod.css">
-    <link rel="stylesheet" href="academy.css">
+        .academy-meta {
+            display: flex; flex-wrap: wrap; gap: 16px;
+            margin: 24px 0 32px; padding: 20px;
+            background: rgba(255,255,255,0.85); border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .meta-item { flex: 1; min-width: 120px; text-align: center; }
+        .meta-label { display: block; font-size: 0.8rem; color: #999; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+        .meta-value { display: block; font-weight: 600; color: #2f4538; }
+
+        .academy-tagline {
+            font-style: italic; font-size: 1.1rem; color: #3c503c;
+            border-left: 3px solid #c87860; padding-left: 16px; margin: 24px 0;
+        }
+
+        .module-cards { display: flex; flex-direction: column; gap: 16px; margin-top: 24px; }
+        .module-card {
+            display: block; text-decoration: none;
+            background: rgba(255,255,255,0.85); border-radius: 12px;
+            padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .module-card:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        .module-card .module-number { font-size: 0.8rem; color: #c87860; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+        .module-card h3 { font-size: 1.1rem; color: #2f4538; margin: 6px 0 8px; }
+        .module-card p { font-size: 0.95rem; color: #555; line-height: 1.6; margin: 0 0 10px; }
+        .module-card .module-sbu { font-size: 0.85rem; color: #999; font-weight: 500; }
+        .module-card .read-more { font-size: 0.9rem; color: #c87860; font-weight: 600; }
+
+        .pricing-grid { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 24px; }
+        .pricing-card {
+            flex: 1; min-width: 200px;
+            background: rgba(255,255,255,0.85); border-radius: 12px;
+            padding: 24px; text-align: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .pricing-card.featured { border: 2px solid #c87860; }
+        .pricing-label { font-size: 0.85rem; color: #999; font-weight: 600; text-transform: uppercase; margin-bottom: 8px; }
+        .pricing-amount { font-size: 1.8rem; font-weight: 700; color: #2f4538; margin: 8px 0; }
+        .pricing-detail { font-size: 0.9rem; color: #666; margin-bottom: 16px; }
+        .pricing-btn {
+            display: inline-block; padding: 10px 24px; border-radius: 8px;
+            text-decoration: none; font-weight: 600; font-size: 0.9rem;
+        }
+        .pricing-btn-primary { background: #c87860; color: #fff; }
+        .pricing-btn-secondary { background: transparent; color: #c87860; border: 2px solid #c87860; }
+        .pricing-btn:hover { opacity: 0.85; }
+
+        .werkgeversbrief-card {
+            background: rgba(255,255,255,0.85); border-radius: 12px;
+            padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            margin-top: 24px;
+        }
+        .werkgeversbrief-card h3 { color: #2f4538; margin-bottom: 8px; }
+        .werkgeversbrief-card p { color: #555; line-height: 1.6; }
+
+        .cta-box {
+            text-align: center; margin-top: 40px; padding: 32px;
+            background: rgba(255,255,255,0.85); border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .cta-box p { font-size: 1.05rem; color: #2f4538; margin-bottom: 16px; }
+        .cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+        .cta-buttons a {
+            display: inline-block; padding: 12px 28px; border-radius: 8px;
+            text-decoration: none; font-weight: 600; font-size: 0.95rem;
+        }
+        .btn-mail { background: #c87860; color: #fff; }
+        .btn-wa { background: transparent; color: #c87860; border: 2px solid #c87860; }
+        .btn-mail:hover, .btn-wa:hover { opacity: 0.85; }
+    </style>
 </head>
 
 <body>
-    <!-- === Global Organic Background === -->
-    <div class="global-background" aria-hidden="true">
-        <div class="bg-layer layer-slow" data-speed="0.03">
-            <div class="organic-shape shape-sage-1"></div>
-            <div class="organic-shape shape-peach-1"></div>
-            <div class="organic-shape shape-mist-1"></div>
-        </div>
-        <div class="bg-layer layer-medium" data-speed="0.08">
-            <div class="organic-shape shape-eucalyptus-1"></div>
-            <div class="organic-shape shape-olive-1"></div>
-        </div>
-        <div class="bg-overlay"></div>
-    </div>
+    <div class="academy-page">
+        <a href="/" class="academy-back">&larr; Terug naar Be JorSelf</a>
+        <img src="assets/logo.png" alt="Be JorSelf" class="academy-logo">
 
-    <!-- Header -->
-    <header class="header" id="header">
-        <div class="container header-content">
-            <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="Be JorSelf Logo">
+        <h1>Be Jorself Academy</h1>
+        <p>Human-Centric Professionalisering in de Jeugdzorg.<br>
+        Asynchroon e-learning op HBO+ niveau.</p>
+
+        <div class="academy-meta">
+            <div class="meta-item">
+                <span class="meta-label">Format</span>
+                <span class="meta-value">Asynchroon e-learning</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Niveau</span>
+                <span class="meta-value">HBO+</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Studiebelasting</span>
+                <span class="meta-value">7 SBU</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Accreditatie</span>
+                <span class="meta-value">7 SKJ-punten</span>
+            </div>
+        </div>
+
+        <p class="academy-tagline">"Herstellend voor de mens, preventief voor de professional."</p>
+
+        <p>
+            De Be Jorself Academy is een asynchroon e-learning platform dat je in je eigen tempo kunt volgen.
+            Geen live sessies, geen vaste tijden — jij bepaalt wanneer en waar je leert.
+        </p>
+        <p>
+            De kern van het programma draait om het bewaken van de grens tussen sympathie
+            en empathie. Tussen overnemen vanuit paniek en rationele compassie bieden.
+            Tussen in de put springen en de ladder aanreiken.
+        </p>
+        <p>
+            Na afronding van alle modules en goedkeuring van je eindreflectieverslag door Jordana
+            ontvang je een certificaat.
+        </p>
+
+        <h2>De 5 modules</h2>
+
+        <div class="module-cards">
+            <a href="academy/module-0.html" class="module-card">
+                <span class="module-number">Module 0</span>
+                <h3>De Landing</h3>
+                <p>Introductiemodule waarin je landt in het programma. Orientatie op de werkwijze, verwachtingen en jouw persoonlijke startpositie.</p>
+                <span class="module-sbu">0,5 SBU</span> &middot; <span class="read-more">Bekijk module &rarr;</span>
             </a>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="over-jordana.html" class="nav-link">Over Jordana</a></li>
-                    <li><a href="aanbod.html" class="nav-link">Aanbod</a></li>
-                    <li><a href="academy.html" class="nav-link active">Academy</a></li>
-                    <li><a href="index.html#reflectie" class="nav-link">Reflectie</a></li>
-                    <li><a href="blog/" class="nav-link">Blog</a></li>
-                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-            <button class="mobile-menu-btn" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </header>
 
-    <!-- Breadcrumb -->
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <div class="container">
-            <ol class="breadcrumb-list">
-                <li><a href="index.html">Home</a></li>
-                <li class="separator">/</li>
-                <li aria-current="page">Academy</li>
-            </ol>
-        </div>
-    </nav>
+            <a href="academy/module-1.html" class="module-card">
+                <span class="module-number">Module 1</span>
+                <h3>Emotionele Intelligentie — De Put vs. De Ladder</h3>
+                <p>Het verschil tussen in de put springen (sympathie) en de ladder aanreiken (empathie). Professionele distantie en nabijheid in balans.</p>
+                <span class="module-sbu">1,5 SBU</span> &middot; <span class="read-more">Bekijk module &rarr;</span>
+            </a>
 
-    <!-- Academy Intro -->
-    <section class="academy-intro">
-        <div class="container">
-            <h1 class="page-title fade-in">Be Jorself Academy</h1>
-            <p class="page-subtitle fade-in">
-                Human-Centric Professionalisering in de Jeugdzorg.<br>
-                Asynchroon e-learning op HBO+ niveau.
+            <a href="academy/module-2.html" class="module-card">
+                <span class="module-number">Module 2</span>
+                <h3>Reflectief Werken — De Red-Reflex</h3>
+                <p>Leer je eigen Red-Reflex herkennen met de Deurklink-Check. 50% methodische reflectie via schrijfopdrachten voor je portfolio.</p>
+                <span class="module-sbu">2,0 SBU</span> &middot; <span class="read-more">Bekijk module &rarr;</span>
+            </a>
+
+            <a href="academy/module-3.html" class="module-card">
+                <span class="module-number">Module 3</span>
+                <h3>Veerkracht &amp; Radicale Zelfzorg — De Biologische Reset</h3>
+                <p>Fysiologische tools om binnen je Window of Tolerance te blijven. Gebaseerd op de Polyvagaaltheorie en biologische stressregulatie.</p>
+                <span class="module-sbu">1,5 SBU</span> &middot; <span class="read-more">Bekijk module &rarr;</span>
+            </a>
+
+            <a href="academy/module-4.html" class="module-card">
+                <span class="module-number">Module 4</span>
+                <h3>Eindtoetsing &amp; Borging</h3>
+                <p>Verplicht eindreflectieverslag rondom morele stress en de Wounded Healer. Persoonlijke beoordeling door Jordana.</p>
+                <span class="module-sbu">1,5 SBU</span> &middot; <span class="read-more">Bekijk module &rarr;</span>
+            </a>
+        </div>
+
+        <h2>Investering</h2>
+        <p>Alle prijzen zijn btw-vrijgesteld (educatieve dienstverlening).</p>
+
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <p class="pricing-label">1 training</p>
+                <p class="pricing-amount">&euro;275</p>
+                <p class="pricing-detail">Per individuele module</p>
+                <a href="index.html#contact" class="pricing-btn pricing-btn-secondary">Meer info</a>
+            </div>
+            <div class="pricing-card featured">
+                <p class="pricing-label">2 trainingen</p>
+                <p class="pricing-amount">&euro;495</p>
+                <p class="pricing-detail">Bespaar &euro;55 op de losse prijs</p>
+                <a href="index.html#contact" class="pricing-btn pricing-btn-primary">Aanmelden</a>
+            </div>
+            <div class="pricing-card">
+                <p class="pricing-label">4 trainingen</p>
+                <p class="pricing-amount">&euro;895 – &euro;995</p>
+                <p class="pricing-detail">Compleet programma</p>
+                <a href="index.html#contact" class="pricing-btn pricing-btn-secondary">Meer info</a>
+            </div>
+        </div>
+
+        <h2>Werkgeversbrief</h2>
+        <div class="werkgeversbrief-card">
+            <p>
+                Wil je dat je werkgever de training vergoedt? Bekijk de werkgeversbrief
+                waarin het programma, de accreditatie en de meerwaarde voor je organisatie
+                helder worden toegelicht. Klaar om in te dienen bij je leidinggevende of HR-afdeling.
             </p>
+            <p style="margin-top: 16px;">
+                <a href="academy/werkgeversbrief.html" style="font-weight: 600;">Bekijk werkgeversbrief &rarr;</a>
+            </p>
+        </div>
 
-            <div class="academy-meta fade-in">
-                <div class="meta-item">
-                    <span class="meta-label">Format</span>
-                    <span class="meta-value">Asynchroon e-learning</span>
-                </div>
-                <div class="meta-item">
-                    <span class="meta-label">Niveau</span>
-                    <span class="meta-value">HBO+</span>
-                </div>
-                <div class="meta-item">
-                    <span class="meta-label">Studiebelasting</span>
-                    <span class="meta-value">7 SBU</span>
-                </div>
-                <div class="meta-item">
-                    <span class="meta-label">Accreditatie</span>
-                    <span class="meta-value">7 SKJ-punten</span>
-                </div>
+        <div class="cta-box">
+            <p>Gratis kennismakingsgesprek?<br>Neem contact op en ontdek welke module bij jou past.</p>
+            <div class="cta-buttons">
+                <a href="mailto:info@bejorself.nl" class="btn-mail">Mail ons</a>
+                <a href="https://wa.me/31641854274" target="_blank" class="btn-wa">WhatsApp</a>
             </div>
         </div>
-    </section>
 
-    <!-- Description -->
-    <section class="aanbod-section">
-        <div class="container">
-            <div class="academy-description fade-in">
-                <p class="academy-tagline">
-                    "Herstellend voor de mens, preventief voor de professional."
-                </p>
-                <p>
-                    De Be Jorself Academy is een asynchroon e-learning platform dat je in je eigen tempo kunt volgen.
-                    Geen live sessies, geen vaste tijden — jij bepaalt wanneer en waar je leert.
-                </p>
-                <p>
-                    De kern van het programma draait om het bewaken van de grens tussen sympathie
-                    en empathie. Tussen overnemen vanuit paniek en rationele compassie bieden.
-                    Tussen in de put springen en de ladder aanreiken.
-                </p>
-                <p>
-                    Na afronding van alle modules en goedkeuring van je eindreflectieverslag door Jordana
-                    ontvang je een certificaat.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Modules Grid -->
-    <section class="modules-section">
-        <div class="container">
-            <h2 class="fade-in">De 5 modules</h2>
-
-            <div class="module-grid">
-                <!-- Module 0 -->
-                <a href="academy/module-0.html" class="module-card fade-in">
-                    <span class="module-number">Module 0</span>
-                    <h3>De Landing</h3>
-                    <p>
-                        Introductiemodule waarin je landt in het programma. Orientatie op de
-                        werkwijze, verwachtingen en jouw persoonlijke startpositie.
-                    </p>
-                    <span class="module-sbu">0,5 SBU</span>
-                    <span class="read-more-arrow">Bekijk module &#8594;</span>
-                </a>
-
-                <!-- Module 1 -->
-                <a href="academy/module-1.html" class="module-card fade-in">
-                    <span class="module-number">Module 1</span>
-                    <h3>Emotionele Intelligentie — De Put vs. De Ladder</h3>
-                    <p>
-                        Het verschil tussen in de put springen (sympathie) en de ladder aanreiken (empathie).
-                        Professionele distantie en nabijheid in balans.
-                    </p>
-                    <span class="module-sbu">1,5 SBU</span>
-                    <span class="read-more-arrow">Bekijk module &#8594;</span>
-                </a>
-
-                <!-- Module 2 -->
-                <a href="academy/module-2.html" class="module-card fade-in">
-                    <span class="module-number">Module 2</span>
-                    <h3>Reflectief Werken — De Red-Reflex</h3>
-                    <p>
-                        Leer je eigen Red-Reflex herkennen met de Deurklink-Check.
-                        50% methodische reflectie via schrijfopdrachten voor je portfolio.
-                    </p>
-                    <span class="module-sbu">2,0 SBU</span>
-                    <span class="read-more-arrow">Bekijk module &#8594;</span>
-                </a>
-
-                <!-- Module 3 -->
-                <a href="academy/module-3.html" class="module-card fade-in">
-                    <span class="module-number">Module 3</span>
-                    <h3>Veerkracht &amp; Radicale Zelfzorg — De Biologische Reset</h3>
-                    <p>
-                        Fysiologische tools om binnen je Window of Tolerance te blijven.
-                        Gebaseerd op de Polyvagaaltheorie en biologische stressregulatie.
-                    </p>
-                    <span class="module-sbu">1,5 SBU</span>
-                    <span class="read-more-arrow">Bekijk module &#8594;</span>
-                </a>
-
-                <!-- Module 4 -->
-                <a href="academy/module-4.html" class="module-card fade-in">
-                    <span class="module-number">Module 4</span>
-                    <h3>Eindtoetsing &amp; Borging</h3>
-                    <p>
-                        Verplicht eindreflectieverslag rondom morele stress en de Wounded Healer.
-                        Persoonlijke beoordeling door Jordana.
-                    </p>
-                    <span class="module-sbu">1,5 SBU</span>
-                    <span class="read-more-arrow">Bekijk module &#8594;</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing -->
-    <section class="pricing-section">
-        <div class="container">
-            <h2 class="fade-in">Investering</h2>
-            <p class="pricing-note fade-in">Alle prijzen zijn btw-vrijgesteld (educatieve dienstverlening).</p>
-
-            <div class="pricing-grid fade-in">
-                <div class="pricing-card">
-                    <p class="pricing-label">1 training</p>
-                    <p class="pricing-amount">&euro;275</p>
-                    <p class="pricing-detail">Per individuele module</p>
-                    <a href="index.html#contact" class="btn btn-secondary">Meer info</a>
-                </div>
-
-                <div class="pricing-card featured">
-                    <p class="pricing-label">2 trainingen</p>
-                    <p class="pricing-amount">&euro;495</p>
-                    <p class="pricing-detail">Bespaar &euro;55 op de losse prijs</p>
-                    <a href="index.html#contact" class="btn btn-primary">Aanmelden</a>
-                </div>
-
-                <div class="pricing-card">
-                    <p class="pricing-label">4 trainingen</p>
-                    <p class="pricing-amount">&euro;895 – &euro;995</p>
-                    <p class="pricing-detail">Compleet programma</p>
-                    <a href="index.html#contact" class="btn btn-secondary">Meer info</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Werkgeversbrief -->
-    <section class="werkgeversbrief-section">
-        <div class="container">
-            <div class="werkgeversbrief-card fade-in">
-                <h2>Werkgeversbrief</h2>
-                <p>
-                    Wil je dat je werkgever de training vergoedt? Download de werkgeversbrief
-                    waarin het programma, de accreditatie en de meerwaarde voor je organisatie
-                    helder worden toegelicht. Klaar om in te dienen bij je leidinggevende of HR-afdeling.
-                </p>
-                <a href="academy/werkgeversbrief.html" class="btn-download">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                        <polyline points="7 10 12 15 17 10"></polyline>
-                        <line x1="12" y1="15" x2="12" y2="3"></line>
-                    </svg>
-                    Bekijk werkgeversbrief
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content fade-in">
-                <p class="cta-text">
-                    Gratis kennismakingsgesprek?<br>
-                    Neem contact op en ontdek welke module bij jou past.
-                </p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="mailto:info@bejorself.nl" class="btn btn-primary">Mail ons</a>
-                    <a href="https://wa.me/31641854274" target="_blank" class="btn btn-secondary">WhatsApp</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="assets/logo.png" alt="Be JorSelf" class="footer-logo">
-                    <p class="footer-tagline">Online Training voor Professionals</p>
-                </div>
-                <div class="footer-nav">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="over-jordana.html">Over Jordana</a></li>
-                        <li><a href="aanbod.html">Aanbod</a></li>
-                        <li><a href="academy.html">Academy</a></li>
-                        <li><a href="blog/">Blog</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.instagram.com/be_jorself_trainingen/" target="_blank" rel="noopener"
-                        aria-label="Instagram">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="social-icon">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/jordananinkeula/" target="_blank" rel="noopener"
-                        aria-label="LinkedIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="social-icon">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-                            </path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                    </a>
-                    <a href="https://www.tiktok.com/@be_jorself" target="_blank" rel="noopener" aria-label="TikTok">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="social-icon">
-                            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>Be JorSelf &copy; 2026 — Powered by <a href="https://linkaiagency.com" target="_blank"
-                        rel="noopener">Link AI</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+        <hr style="margin-top: 48px; border: none; border-top: 1px solid #e0e0e0;">
+        <p style="color: #999; font-size: 0.85rem; margin-top: 16px;">Be JorSelf Academy — KVK 81711387 — <a href="https://bejorself.nl">bejorself.nl</a></p>
+    </div>
 </body>
 
 </html>

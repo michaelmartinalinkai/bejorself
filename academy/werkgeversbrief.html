@@ -1,346 +1,139 @@
 <!DOCTYPE html>
 <html lang="nl">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-    <meta name="description"
-        content="Werkgeversbrief Be Jorself Academy. Voorbeeldbrief om je werkgever te vragen de training te vergoeden. SKJ-geaccrediteerd, 7 SBU, HBO+ niveau.">
-    <title>Werkgeversbrief – Be JorSelf Academy</title>
-
-    <link rel="canonical" href="https://bejorself.nl/academy/werkgeversbrief.html">
-
-    <meta property="og:title" content="Werkgeversbrief – Be JorSelf Academy">
-    <meta property="og:description" content="Voorbeeldbrief om je werkgever te vragen de Be Jorself Academy training te vergoeden.">
-    <meta property="og:image" content="https://bejorself.nl/assets/logo.png">
-    <meta property="og:url" content="https://bejorself.nl/academy/werkgeversbrief.html">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="nl_NL">
-    <meta property="og:site_name" content="Be JorSelf">
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bejorself.nl/" },
-            { "@type": "ListItem", "position": 2, "name": "Academy", "item": "https://bejorself.nl/academy.html" },
-            { "@type": "ListItem", "position": 3, "name": "Werkgeversbrief", "item": "https://bejorself.nl/academy/werkgeversbrief.html" }
-        ]
-    }
-    </script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="../styles.css?v=12">
-    <link rel="stylesheet" href="../aanbod.css">
-    <link rel="stylesheet" href="../academy.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Werkgeversbrief — Be JorSelf Academy</title>
+    <link rel="stylesheet" href="../styles.css">
     <style>
-        .brief-container {
-            max-width: 700px;
-            margin: 0 auto;
-            background: var(--color-card-bg);
-            border-radius: var(--radius-lg);
-            padding: var(--space-xl);
-            box-shadow: var(--shadow-soft);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-        }
-
-        .brief-container p {
-            font-size: 1rem;
-            color: var(--color-text-soft);
-            line-height: 1.8;
-            margin-bottom: var(--space-sm);
-        }
-
-        .brief-container h3 {
-            font-family: var(--font-display);
-            font-size: 1.2rem;
-            color: var(--color-primary);
-            margin-top: var(--space-md);
-            margin-bottom: var(--space-sm);
-        }
-
-        .brief-container ul {
-            list-style: none;
-            margin-bottom: var(--space-md);
-        }
-
-        .brief-container ul li {
-            position: relative;
-            padding-left: var(--space-lg);
-            margin-bottom: var(--space-xs);
-            color: var(--color-text-dark);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        .brief-container ul li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0.6em;
-            width: 8px;
-            height: 8px;
-            background: var(--color-primary-light);
-            border-radius: 50%;
-            opacity: 0.6;
-        }
-
-        .brief-header {
-            text-align: center;
-            margin-bottom: var(--space-lg);
-            padding-bottom: var(--space-md);
-            border-bottom: 1px solid rgba(47, 79, 70, 0.1);
-        }
-
-        .brief-header h2 {
-            font-family: var(--font-display);
-            font-size: clamp(1.4rem, 3vw, 1.8rem);
-            font-weight: 500;
-            color: var(--color-primary);
-            margin-bottom: var(--space-xs);
-        }
-
-        .brief-header p {
-            font-size: 0.9rem;
-            color: var(--color-text-soft);
-        }
-
+        .brief-page { max-width: 800px; margin: 0 auto; padding: 40px 24px 80px; }
+        .brief-page h1 { font-size: 2rem; margin-bottom: 8px; color: #2f4538; }
+        .brief-page h2 { font-size: 1.3rem; margin-top: 32px; margin-bottom: 12px; color: #3c503c; }
+        .brief-page p, .brief-page li { line-height: 1.7; color: #333; font-size: 1rem; }
+        .brief-page ul { padding-left: 24px; }
+        .brief-page li { margin-bottom: 8px; }
+        .brief-page a { color: #c87860; }
+        .brief-logo { width: 120px; margin-bottom: 24px; }
+        .brief-back { display: inline-block; margin-bottom: 24px; color: #3c503c; text-decoration: none; font-weight: 600; }
+        .brief-back:hover { text-decoration: underline; }
         .brief-placeholder {
             display: inline-block;
-            background: rgba(209, 161, 147, 0.15);
-            color: var(--color-accent);
-            padding: 2px 8px;
+            background: rgba(209, 161, 147, 0.2);
+            color: #c87860;
+            padding: 2px 10px;
             border-radius: 4px;
             font-weight: 500;
         }
-
+        .brief-card {
+            background: rgba(255,255,255,0.85);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            margin-top: 24px;
+        }
         .brief-actions {
             display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: var(--space-lg);
-            padding-top: var(--space-md);
-            border-top: 1px solid rgba(47, 79, 70, 0.1);
+            gap: 12px;
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid #e0e0e0;
+            flex-wrap: wrap;
         }
+        .brief-actions .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.95rem;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-print {
+            background: #2f4538;
+            color: #fff;
+        }
+        .btn-print:hover { background: #3e5a4d; }
+        .btn-back {
+            background: rgba(47,69,56,0.08);
+            color: #2f4538;
+        }
+        .btn-back:hover { background: rgba(47,69,56,0.15); }
 
         @media print {
-            .header, .breadcrumb, .brief-actions, .cta-section, .footer, .global-background {
-                display: none !important;
-            }
-            body {
-                background: white;
-            }
-            .brief-container {
-                box-shadow: none;
-                border: none;
-                padding: 0;
-                background: white;
-            }
+            .brief-back, .brief-actions, .brief-footer { display: none !important; }
+            body { background: white; }
+            .brief-card { box-shadow: none; border: none; padding: 0; background: white; }
         }
     </style>
 </head>
-
 <body>
-    <div class="global-background" aria-hidden="true">
-        <div class="bg-layer layer-slow" data-speed="0.03">
-            <div class="organic-shape shape-sage-1"></div>
-            <div class="organic-shape shape-peach-1"></div>
-            <div class="organic-shape shape-mist-1"></div>
+    <div class="brief-page">
+        <a href="../academy.html" class="brief-back">&larr; Terug naar Academy</a>
+        <img src="../assets/logo.png" alt="Be JorSelf" class="brief-logo">
+
+        <h1>Werkgeversbrief</h1>
+        <p style="color: #5c7066; margin-bottom: 8px;">Voorbeeldbrief om je werkgever te vragen de Be Jorself Academy training te vergoeden. Pas de gemarkeerde velden aan en stuur hem in.</p>
+
+        <div class="brief-card">
+            <h2 style="text-align: center; margin-top: 0;">Verzoek tot vergoeding scholing</h2>
+            <p style="text-align: center; color: #5c7066; font-size: 0.9rem; margin-bottom: 32px;">Be Jorself Academy — Human-Centric Professionalisering in de Jeugdzorg</p>
+
+            <p>Geachte <span class="brief-placeholder">[naam leidinggevende/HR]</span>,</p>
+
+            <p>Graag vraag ik uw goedkeuring en financiele ondersteuning voor deelname aan de Be Jorself Academy, een e-learning programma gericht op human-centric professionalisering in de jeugdzorg.</p>
+
+            <h2>Over het programma</h2>
+            <p>De Be Jorself Academy is een asynchroon e-learning platform op HBO+ niveau, ontwikkeld door Jordana Ninkeula. Het programma richt zich op emotionele intelligentie, reflectief werken, veerkracht en radicale zelfzorg voor professionals in de jeugdzorg en het sociaal domein.</p>
+
+            <h2>Kenmerken</h2>
+            <ul>
+                <li>5 modules, totaal 7 SBU (Studie Belasting Uren)</li>
+                <li>SKJ-geaccrediteerd: 7 accreditatiepunten</li>
+                <li>HBO+ niveau</li>
+                <li>Asynchroon: in eigen tempo te volgen, geen verstoring van werkroosters</li>
+                <li>Certificering na goedkeuring eindreflectieverslag</li>
+            </ul>
+
+            <h2>Inhoud van de modules</h2>
+            <ul>
+                <li><strong>Module 0:</strong> De Landing — Orientatie en startpositiebepaling</li>
+                <li><strong>Module 1:</strong> Emotionele Intelligentie — Professionele distantie en nabijheid</li>
+                <li><strong>Module 2:</strong> Reflectief Werken — Methodische reflectie en portfolio-opbouw</li>
+                <li><strong>Module 3:</strong> Veerkracht en Radicale Zelfzorg — Stressregulatie en duurzame inzetbaarheid</li>
+                <li><strong>Module 4:</strong> Eindtoetsing en Borging — Eindreflectieverslag en certificering</li>
+            </ul>
+
+            <h2>Meerwaarde voor de organisatie</h2>
+            <ul>
+                <li>Versterking van professioneel handelen en reflectief vermogen</li>
+                <li>Preventie van compassiemoeheid en burn-out bij medewerkers</li>
+                <li>SKJ-punten voor herregistratie</li>
+                <li>Duurzame inzetbaarheid van professionals</li>
+                <li>Verbetering van de kwaliteit van zorg en begeleiding</li>
+            </ul>
+
+            <h2>Investering</h2>
+            <p>De kosten voor het programma bedragen <span class="brief-placeholder">[bedrag]</span> (btw-vrijgesteld op grond van educatieve dienstverlening). Er zijn geen bijkomende kosten voor materiaal of reizen, aangezien het programma volledig online te volgen is.</p>
+
+            <p>Ik vertrouw erop dat deze scholing bijdraagt aan mijn professionele ontwikkeling en daarmee aan de kwaliteit van ons werk. Ik bespreek graag de mogelijkheden met u.</p>
+
+            <p>Met vriendelijke groet,<br>
+            <span class="brief-placeholder">[je naam]</span><br>
+            <span class="brief-placeholder">[je functie]</span></p>
+
+            <div class="brief-actions">
+                <button onclick="window.print()" class="btn btn-print">Afdrukken / PDF opslaan</button>
+                <a href="../academy.html" class="btn btn-back">Terug naar Academy</a>
+            </div>
         </div>
-        <div class="bg-layer layer-medium" data-speed="0.08">
-            <div class="organic-shape shape-eucalyptus-1"></div>
-            <div class="organic-shape shape-olive-1"></div>
-        </div>
-        <div class="bg-overlay"></div>
+
+        <hr style="margin-top: 48px; border: none; border-top: 1px solid #e0e0e0;">
+        <p class="brief-footer" style="color: #999; font-size: 0.85rem; margin-top: 16px;">
+            Be JorSelf Academy — <a href="https://bejorself.nl/academy.html">bejorself.nl/academy</a> —
+            <a href="mailto:info@bejorself.nl">info@bejorself.nl</a> —
+            WhatsApp: <a href="https://wa.me/31641854274">+31 6 41854274</a>
+        </p>
     </div>
-
-    <header class="header" id="header">
-        <div class="container header-content">
-            <a href="../index.html" class="logo">
-                <img src="../assets/logo.png" alt="Be JorSelf Logo">
-            </a>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li><a href="../index.html" class="nav-link">Home</a></li>
-                    <li><a href="../over-jordana.html" class="nav-link">Over Jordana</a></li>
-                    <li><a href="../aanbod.html" class="nav-link">Aanbod</a></li>
-                    <li><a href="../academy.html" class="nav-link active">Academy</a></li>
-                    <li><a href="../index.html#reflectie" class="nav-link">Reflectie</a></li>
-                    <li><a href="../blog/" class="nav-link">Blog</a></li>
-                    <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-            <button class="mobile-menu-btn" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </header>
-
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <div class="container">
-            <ol class="breadcrumb-list">
-                <li><a href="../index.html">Home</a></li>
-                <li class="separator">/</li>
-                <li><a href="../academy.html">Academy</a></li>
-                <li class="separator">/</li>
-                <li aria-current="page">Werkgeversbrief</li>
-            </ol>
-        </div>
-    </nav>
-
-    <section class="academy-intro">
-        <div class="container">
-            <h1 class="page-title fade-in">Werkgeversbrief</h1>
-            <p class="page-subtitle fade-in">
-                Voorbeeldbrief om je werkgever te vragen de training te vergoeden.<br>
-                Pas de gemarkeerde velden aan en stuur hem in.
-            </p>
-        </div>
-    </section>
-
-    <section class="aanbod-section">
-        <div class="container">
-            <div class="brief-container fade-in">
-                <div class="brief-header">
-                    <h2>Verzoek tot vergoeding scholing</h2>
-                    <p>Be Jorself Academy — Human-Centric Professionalisering in de Jeugdzorg</p>
-                </div>
-
-                <p>
-                    Geachte <span class="brief-placeholder">[naam leidinggevende/HR]</span>,
-                </p>
-
-                <p>
-                    Graag vraag ik uw goedkeuring en financiele ondersteuning voor deelname aan de
-                    Be Jorself Academy, een e-learning programma gericht op human-centric
-                    professionalisering in de jeugdzorg.
-                </p>
-
-                <h3>Over het programma</h3>
-                <p>
-                    De Be Jorself Academy is een asynchroon e-learning platform op HBO+ niveau,
-                    ontwikkeld door Jordana Ninkeula. Het programma richt zich op emotionele
-                    intelligentie, reflectief werken, veerkracht en radicale zelfzorg voor
-                    professionals in de jeugdzorg en het sociaal domein.
-                </p>
-
-                <h3>Kenmerken</h3>
-                <ul>
-                    <li>5 modules, totaal 7 SBU (Studie Belasting Uren)</li>
-                    <li>SKJ-geaccrediteerd: 7 accreditatiepunten</li>
-                    <li>HBO+ niveau</li>
-                    <li>Asynchroon: in eigen tempo te volgen, geen verstoring van werkroosters</li>
-                    <li>Certificering na goedkeuring eindreflectieverslag</li>
-                </ul>
-
-                <h3>Inhoud van de modules</h3>
-                <ul>
-                    <li>Module 0: De Landing — Orientatie en startpositiebepaling</li>
-                    <li>Module 1: Emotionele Intelligentie — Professionele distantie en nabijheid</li>
-                    <li>Module 2: Reflectief Werken — Methodische reflectie en portfolio-opbouw</li>
-                    <li>Module 3: Veerkracht en Radicale Zelfzorg — Stressregulatie en duurzame inzetbaarheid</li>
-                    <li>Module 4: Eindtoetsing en Borging — Eindreflectieverslag en certificering</li>
-                </ul>
-
-                <h3>Meerwaarde voor de organisatie</h3>
-                <ul>
-                    <li>Versterking van professioneel handelen en reflectief vermogen</li>
-                    <li>Preventie van compassiemoeheid en burn-out bij medewerkers</li>
-                    <li>SKJ-punten voor herregistratie</li>
-                    <li>Duurzame inzetbaarheid van professionals</li>
-                    <li>Verbetering van de kwaliteit van zorg en begeleiding</li>
-                </ul>
-
-                <h3>Investering</h3>
-                <p>
-                    De kosten voor het programma bedragen <span class="brief-placeholder">[bedrag]</span>
-                    (btw-vrijgesteld op grond van educatieve dienstverlening). Er zijn geen bijkomende
-                    kosten voor materiaal of reizen, aangezien het programma volledig online te volgen is.
-                </p>
-
-                <p>
-                    Ik vertrouw erop dat deze scholing bijdraagt aan mijn professionele ontwikkeling
-                    en daarmee aan de kwaliteit van ons werk. Ik bespreek graag de mogelijkheden
-                    met u.
-                </p>
-
-                <p>
-                    Met vriendelijke groet,<br>
-                    <span class="brief-placeholder">[je naam]</span><br>
-                    <span class="brief-placeholder">[je functie]</span>
-                </p>
-
-                <p style="font-size: 0.85rem; color: var(--color-text-soft); margin-top: var(--space-md);">
-                    Meer informatie: <a href="https://bejorself.nl/academy.html" style="color: var(--color-accent);">bejorself.nl/academy</a>
-                    — Contact: <a href="mailto:info@bejorself.nl" style="color: var(--color-accent);">info@bejorself.nl</a>
-                    — WhatsApp: <a href="https://wa.me/31641854274" style="color: var(--color-accent);">+31 6 41854274</a>
-                </p>
-
-                <div class="brief-actions">
-                    <button onclick="window.print()" class="btn btn-primary">Afdrukken / PDF opslaan</button>
-                    <a href="../academy.html" class="btn btn-secondary">Terug naar Academy</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content fade-in">
-                <p class="cta-text">
-                    Heb je hulp nodig bij het aanvragen?<br>
-                    Neem gerust contact op.
-                </p>
-                <a href="mailto:info@bejorself.nl" class="btn btn-primary">Mail ons</a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="../assets/logo.png" alt="Be JorSelf" class="footer-logo">
-                    <p class="footer-tagline">Online Training voor Professionals</p>
-                </div>
-                <div class="footer-nav">
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../over-jordana.html">Over Jordana</a></li>
-                        <li><a href="../aanbod.html">Aanbod</a></li>
-                        <li><a href="../academy.html">Academy</a></li>
-                        <li><a href="../blog/">Blog</a></li>
-                        <li><a href="../index.html#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.instagram.com/be_jorself_trainingen/" target="_blank" rel="noopener" aria-label="Instagram">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/jordananinkeula/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                    </a>
-                    <a href="https://www.tiktok.com/@be_jorself" target="_blank" rel="noopener" aria-label="TikTok">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
-                    </a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>Be JorSelf &copy; 2026 — Powered by <a href="https://linkaiagency.com" target="_blank" rel="noopener">Link AI</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="../script.js"></script>
 </body>
-
 </html>
